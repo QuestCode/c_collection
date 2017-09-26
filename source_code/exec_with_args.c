@@ -6,7 +6,7 @@
 
 #define COMMAND_LENGTH 128
 #define MAX_ARGS 100
-//-----------------------------------------------------------------------------
+
 int main(void) {
 
     char Command[COMMAND_LENGTH];
@@ -22,6 +22,8 @@ int main(void) {
             perror("Could not fork");
             exit(EXIT_FAILURE);
         }
+        
+        
         if (ChildPID == 0) {
 //----In the child
             MyArgC = 0;
